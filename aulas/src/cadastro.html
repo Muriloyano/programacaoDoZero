@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+
+    <link rel="stylesheet" href="../aula-6/2-cadastro.css"/>
+</head>
+<body>
+
+    <div class="cadastro-container">
+
+        <h1>Cadastro</h1>
+
+        <img height="100" src="../logo.png" alt="Logo da Empresa"/>
+
+        <form>
+            <label for="txtnome">Nome: </label>
+            <input type="text" id="txtnome" placeholder="Seu nome" required/>
+
+            <label for="txtemail">E-mail: </label>
+            <input type="text" id="txtemail" placeholder="seuemail@gmail.com" required/>
+
+            <label for="txtsobrenome">Sobrenome: </label>
+            <input type="text" id="txtsobrenome" placeholder="Sobrenoeme" required/>
+
+            <label for="txttelefone">Telefone: </label>
+            <input type="text" id="txttelefone" placeholder="(00) 00000-0000" required/>
+
+            <label for="slcgenero">Gênero: </label>
+            <select id="slcgenero" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="nao-informar">Prefiro não informar</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <label for="txtsenha">Senha: </label>
+            <input type="password" id="txtsenha" placeholder="Crie uma senha forte" required/>
+            <span id="spnErro" class="mensagem-erro"></span>
+            <button id="btnCadastrar">Cadastre-se</button>
+        </form>
+
+        <p>Já possui conta? <a href="login.html">Login</a></p>
+
+    </div>
+    <script src="cadastro.js"></script>
+</body>
+</html>

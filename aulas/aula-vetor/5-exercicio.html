@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pessoa mais velha</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>pessoa mais velha</h1>
+
+            <label for="txt1">quantidade de Pessoas:</label>
+            <input type="number" id="txt1">
+
+            <label for="txt3">nome:</label>
+            <input type="text" id="txt3">
+
+            <label for="txt2">idade delas:</label>
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var nomePessoas = [];
+        var idadePessoas = [];
+        function botao_click() {
+
+            var quantidadePessoas = document.getElementById("txt1").value;
+            var qtdPessoas = parseInt(quantidadePessoas);
+
+            if (idadePessoas.length < qtdPessoas ){
+                var idades = document.getElementById("txt2").value;
+                var idade = parseInt(idades);
+
+                idadePessoas.push(idade);
+            }
+            if (nomePessoas.length < qtdPessoas){
+
+                var nomes = document.getElementById("txt3").value;
+
+                nomePessoas.push(nomes);
+            }
+            if (idadePessoas.length == qtdPessoas){
+
+                var pessoaVelha;
+                var posicaoMaiorIdade;
+
+                for (var i = 0; i < idadePessoas.length; i++){
+
+                    var age = idadePessoas[i];
+
+                    if (pessoaVelha == undefined || age > pessoaVelha){
+
+                        pessoaVelha = age;
+                        posicaoMaiorIdade = i;
+                    }
+                }
+
+                var pessoaMaisVelha = nomePessoas[posicaoMaiorIdade];
+
+                alert("A pessoa mais velha é o(a) " + pessoaMaisVelha);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

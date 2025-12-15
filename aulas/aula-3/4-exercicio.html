@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Escola</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Escola</h1>
+
+            <p>Digite a nota do 1 e do 2 semestre: </p>
+
+            <label for="txt1">Nota 1:</label>
+            
+            <input type="number" id="txt1">
+
+            <label for="txt2">Nota 2:</label>
+            
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var nota01 = document.getElementById("txt1").value;
+            var nota1 = parseFloat(nota01);
+
+            var nota02 = document.getElementById("txt2").value;
+            var nota2 = parseFloat(nota02);
+
+            var media = (nota1 + nota2)/2;
+
+            if (media < 6){
+
+                alert("Reprovado");
+            }
+            else{
+
+                alert("Aprovado");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

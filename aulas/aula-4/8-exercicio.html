@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>inverte str</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>inverte str</h1>
+
+            <label for="txt1">Digite uma palavra:</label>
+            
+            <input type="text" id="txt1">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+            var strInvertida = ""
+            var strTxt = document.getElementById("txt1").value 
+        
+            for (var i = strTxt.length - 1; i >= 0; i--){
+                strInvertida += strTxt[i]
+            }
+            alert(strInvertida)
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Terreno</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Terreno</h1>
+
+            <p>Digite as medidas do seu terreno: </p>
+
+            <label for="txt1">Largura:</label>
+            
+            <input type="number" id="txt1">
+
+            <label for="txt2">Comprimento:</label>
+            
+            <input type="number" id="txt2">
+
+            <label for="txt3">Valor do m2:</label>
+            
+            <input type="number" id="txt3">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var largura = document.getElementById("txt1").value;
+            var larg = parseFloat(largura);
+
+            var comprimento = document.getElementById("txt2").value;
+            var compri = parseFloat(comprimento);
+
+            var valor = document.getElementById("txt3").value;
+            var val = parseFloat(valor);
+
+            var area = larg * compri;
+            var valorTotal = area * val;
+
+            alert("O valor total do terreno é: " + valorTotal);
+
+        }
+
+    </script>
+
+</body>
+</html>

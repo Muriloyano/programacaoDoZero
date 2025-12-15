@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Posto</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Posto</h1>
+
+            <p>Digite quantos minutos foram consumidos</p>
+
+            <label for="txt1">Minutos consumidos:</label>
+            
+            <input type="text" id="txt1">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var minutosTotais = document.getElementById("txt1").value;
+            var MimTotal = parseFloat(minutosTotais);
+
+            if (MimTotal <= 100){
+
+                alert("O valor sera de 50R$");
+            }
+            else {
+
+                var valtot = 50 + (2 * (MimTotal-100));
+                alert("O valor a ser pago é: " + valtot);
+            }
+            
+
+        }
+
+    </script>
+
+</body>
+</html>

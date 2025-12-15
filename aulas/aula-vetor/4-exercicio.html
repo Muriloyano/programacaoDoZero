@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Numeros negativos</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Numeros negativos</h1>
+
+            <label for="txt1">Digite a quantidade de Numeros:</label>
+            <input type="number" id="txt1">
+
+            <label for="txt2">Digite os numeros:</label>
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var numerosNegativos = [];
+        var numeros = [];
+        function botao_click() {
+
+            var quantidadeNum = document.getElementById("txt1").value;
+            var qtd = parseInt(quantidadeNum);
+
+            if (numeros.length < qtd){
+                var numero = document.getElementById("txt2").value;
+                var num = parseInt(numero);
+
+                numeros.push(num);
+            }
+
+            if (numeros.length == qtd){
+                
+                for (var i = 0; i < numeros.length; i++){
+
+                    var numero = numeros[i];
+                    
+                    if (numero < 0){
+
+                        numerosNegativos.push(numero);
+                    }
+                }
+
+                alert(numerosNegativos.toString());
+            }
+        }
+
+    </script>
+
+</body>
+</html>
