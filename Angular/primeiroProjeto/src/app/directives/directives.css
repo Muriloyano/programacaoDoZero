@@ -1,0 +1,10 @@
+:host {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backbround-cinza {
+    background: rgb(169, 169, 169) ;
+}

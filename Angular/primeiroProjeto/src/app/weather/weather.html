@@ -1,0 +1,21 @@
+<div class="weather-container">
+    <h2>Consultar Clima</h2>
+
+    <form [formGroup]="locationsForm" (ngSubmit)="obterClima()">
+        <label>Cidade: </label>
+        <input type="text" formControlName="city">
+        
+        <button type="submit" class="botao" [disabled]="!locationsForm.valid">Buscar</button>
+    </form>
+
+    <hr>
+
+    <div *ngIf="weatherData">
+        <h3>Clima em {{ weatherData.name }}</h3>
+        
+        <p><strong>Temperatura:</strong> {{ weatherData.main.temp }} °C</p>
+        <p><strong>Sensação:</strong> {{ weatherData.main.feels_like }} °C</p>
+        <p><strong>Umidade:</strong> {{ weatherData.main.humidity }}%</p>
+        <p><strong>Descrição:</strong> {{ weatherData.weather[0].description }}</p>
+    </div>
+    </div>

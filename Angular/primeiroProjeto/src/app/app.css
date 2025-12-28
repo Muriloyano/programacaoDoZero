@@ -1,0 +1,23 @@
+:host{
+    border: 1px solid black;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+nav {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+}   
+
+nav a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: 700;
+    background: rgb(176, 174, 174);
+}

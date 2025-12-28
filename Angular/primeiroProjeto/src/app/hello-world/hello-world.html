@@ -1,0 +1,30 @@
+<h2>hello-world!</h2>
+
+<p>Primeiro template</p>
+
+<app-filho-a [texto]="textoVaiProFilho" (textoPreenchido)="textoDoFilho = $event"></app-filho-a>
+
+<app-filho-b></app-filho-b>
+
+<p>
+    <label for="caixaPai">Digite o texto para o componente filho</label>
+    <input type="text" id="caixaPai" #caixaPai>
+
+    <button (click)="textoVaiProFilho = caixaPai.value">Enviar</button>
+</p>
+
+<p *ngIf="textoDoFilho">Texto do filho: {{ textoDoFilho }}</p>
+
+<p>
+    <a href="/">Home</a>
+</p>
+
+<p>
+    <a routerLink="filho-a">Filho A</a>
+</p>
+
+<p>
+    <a routerLink="filho-b">Filho B</a>
+</p>
+
+<router-outlet></router-outlet>

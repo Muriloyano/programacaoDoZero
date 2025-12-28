@@ -1,0 +1,43 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 35px;
+
+    color: blue;
+}
+
+p{
+    font-size: 16px;
+}
+
+.botao {
+    border: 0;
+    padding: 15px;
+    border-radius: 45px;
+    font-size: 13px;
+    cursor: pointer;
+    color: rgb(60, 60, 60);
+}
+
+.botao:disabled {
+    background: rgb(181, 181, 181);
+    cursor: default;
+}
+
+.vermelho {
+    background: red;
+}
+
+.verde {
+    background: green;
+}
+
+input[type=text], select {
+    height: 25px;
+    border-radius: 15px;
+    border: 1px solid rgb(187, 186, 186);
+    margin-bottom: 5px;
+    padding: 0 15px;
+}

@@ -1,0 +1,16 @@
+<h1>Template Principal</h1>
+
+<nav>
+    <a routerLink="hello-world" routerLinkActive="active">Hello World</a>
+    <a routerLink="data-binding" routerLinkActive="active">Data Binding</a>
+    <a routerLink="directives" routerLinkActive="active">Directives</a>
+    <a routerLink="customers" routerLinkActive="active">Lista de Clientes</a>
+    <a routerLink="reactive-form" routerLinkActive="active">Reactive Form</a>
+    <a routerLink="template-form" routerLinkActive="active">Template Form</a>
+    <a routerLink="weather" routerLinkActive="active">Weather</a>
+    <a routerLink="pipes" routerLinkActive="active">Pipes</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<p>Posso acessar o Data Binding? <input type="checkbox" [checked]="podeAcessar" (change)="alterarAcesso($event)"></p>

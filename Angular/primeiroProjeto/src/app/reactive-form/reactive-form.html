@@ -1,0 +1,65 @@
+<h2>Formulario Reactive</h2>
+
+<form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+
+    <div class="grid-container">
+        <div class="campo">
+            <label for="name">Nome: </label>
+            <input type="text" id="name" formControlName="name">
+        </div>
+
+        <div class="campo">
+            <label for="cpf">CPF: </label>
+            <input type="text" id="cpf" formControlName="cpf">
+        </div>
+    </div>
+
+    <div formGroupName="address">
+        <h3>Endereço</h3>
+        
+        <div class="grid-container">
+            <div class="campo">
+                <label for="street">Rua: </label>
+                <input type="text" id="street" formControlName="street">
+            </div>
+
+            <div class="campo">
+                <label for="city">Cidade: </label>
+                <input type="text" id="city" formControlName="city">
+            </div>
+
+            <div class="campo">
+                <label for="state">Estado: </label>
+                <input type="text" id="state" formControlName="state">
+            </div>
+
+            <div class="campo">
+                <label for="zip">Cep: </label>
+                <input type="text" id="zip" formControlName="zip">
+            </div>
+        </div>
+    </div>
+
+    <div formArrayName="nicknames">
+        <h3>Apelidos</h3>
+        <div *ngFor="let apelido of apelidos.controls; let i=index" class="campo" style="margin-bottom: 10px;">
+            <label for="apelido-{{i}}">Apelido {{i + 1}}: </label>
+            <input type="text" id="apelido-{{i}}" [formControlName]="i">
+        </div>
+        
+        <button type="button" (click)="adicionarApelido()" style="margin-top: 10px;">+ Adicionar Apelido</button>
+    </div>
+
+    <br><br>
+    
+    <button type="submit" class="botao" [disabled]="!profileForm.valid">Salvar</button>
+
+</form>
+
+<hr> <p>Seu nome é: <strong>{{profileForm.controls.name.value}}</strong></p>
+
+<p>Status: <strong>{{profileForm.status}}</strong></p>
+
+<p>
+    <button type="button" (click)="preencherForm()">Preencher Formulario</button>
+</p>

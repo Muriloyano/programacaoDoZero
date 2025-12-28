@@ -1,0 +1,12 @@
+<h2 [class.titulo]="estilizarTitulo">{{message}}</h2>
+
+<button [attr.ariaLabel]="arialLabel" [disabled]="isDisabled" style="margin: 15px 0;">X</button>
+
+<button (click)="enableBnt()">Habilitar o botao</button>
+
+<button (click)="aplicarEstilo()">Aplicar estilo</button>
+
+<label for="nome">Nome: </label>
+<input type="text" id="nome" [ngModel]="nomeCliente">
+
+<span>O nome digitado é: </span><span id="nomeDigitado">{{nomeCliente}}</span>
