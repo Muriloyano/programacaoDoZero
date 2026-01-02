@@ -1,11 +1,27 @@
-<div class="container">
-    <h2> {{task?.name}} </h2>
-    <p class="status">Status: {{task?.completed ? 'Concluido' : 'Pendente'}}</p>
+<div class="container" *ngIf="task">
+    <h2> {{task.name}} </h2>
+    <p class="status">Status: {{task.completed ? 'Concluido' : 'Pendente'}}</p>
 
     <div>
         <h2>Descricao</h2>
-        <textarea [(ngModel)]="task!.description"></textarea>
-        <button class="save" (click)="save()">Salvar</button>
-        <button class="cancel" (click)="cancel()">Cancelar</button>
+        <textarea [(ngModel)]="task.description" rows="5" style="width: 100%;" class="input-primary"></textarea>
+
+        <h2 style="margin-top: 20px;">Data e Hora</h2>
+        
+        <input 
+            type="datetime-local" 
+            [(ngModel)]="dateString"
+            style="margin-bottom: 20px; padding: 10px; font-size: 16px; width: 100%;"
+        >
+
+        <div class="actions">
+            <button class="save" (click)="save()">Salvar e Voltar</button>
+            <button class="cancel" (click)="cancel()">Cancelar</button>
+        </div>
     </div>
+</div>
+
+<div *ngIf="!task" style="text-align: center; padding: 20px; color: white;">
+    <p>Tarefa não encontrada.</p>
+    <button (click)="cancel()">Voltar</button>
 </div>

@@ -1,6 +1,7 @@
-export class Task {
-    id: number = 0;
-    name: string = '';
-    completed: boolean = false;
-    description?: string;
+export interface Task {
+    id: number,
+    name: '',
+    description: string,
+    completed: false,
+    dueDate: Date;
 }
