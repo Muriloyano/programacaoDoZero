@@ -27,8 +27,21 @@
       </ul>
   
       <div class="add-task-group separator-top">
-        <input [(ngModel)]="newTask.name" placeholder="Nova tarefa..." class="input-primary">
-        <input type="date" [ngModel]="newTask.dueDate | date:'yyyy-MM-dd'" (ngModelChange)="newTask.dueDate = $event" class="input-date">
+        <input 
+          [(ngModel)]="newTask.name" 
+          (keyup.enter)="addTask()" 
+          placeholder="Nova tarefa..." 
+          class="input-primary"
+        >
+        
+        <input 
+          type="date" 
+          [ngModel]="newTask.dueDate | date:'yyyy-MM-dd'" 
+          (ngModelChange)="newTask.dueDate = $event" 
+          (keyup.enter)="addTask()"
+          class="input-date"
+        >
+        
         <button (click)="addTask()" class="btn-primary">+</button>
       </div>
   

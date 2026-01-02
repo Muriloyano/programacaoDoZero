@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-task-filter',
+  standalone: true, 
   imports: [FormsModule],
   templateUrl: './task-filter.html',
   styleUrl: './task-filter.css',
@@ -11,9 +12,9 @@ export class TaskFilter {
 
   filter: string = '';
 
-  @Output() taskFilter = new EventEmitter<string>();
+  @Output() filterEvent = new EventEmitter<string>();
 
   filterTask() {
-    this.taskFilter.emit(this.filter);
+    this.filterEvent.emit(this.filter);
   }
 }

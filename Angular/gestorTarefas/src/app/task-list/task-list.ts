@@ -24,7 +24,6 @@ export class TaskList implements OnInit {
   filteredTasks: Array<Task> = [];
   newTask: Task = { id: 0, name: '', description: '', completed: false, dueDate: new Date() };
 
-  // --- Variaveis do Calendario ---
   currentDate: Date = new Date();
   daysInMonth: Array<any> = [];
   weekDays: string[] = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
@@ -73,13 +72,10 @@ export class TaskList implements OnInit {
     }
   }
 
-  // --- NAVEGAÇÃO CORRIGIDA ---
   openTaskDetails(task: Task) {
-    // Agora o nome bate com o app.routes.ts: 'taskDetails/:id'
     this.router.navigate(['/taskDetails', task.id]);
   }
 
-  // --- CALENDÁRIO ---
   generateCalendar() {
     this.daysInMonth = [];
     const year = this.currentDate.getFullYear();
@@ -106,7 +102,7 @@ export class TaskList implements OnInit {
              !task.completed;
     });
   }
-
+  
   changeMonth(offset: number) {
     this.currentDate.setMonth(this.currentDate.getMonth() + offset);
     this.currentDate = new Date(this.currentDate);
