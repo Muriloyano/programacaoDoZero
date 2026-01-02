@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from '../services/menu';
 
 @Component({
   selector: 'app-menu',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class Menu {
 
+  constructor(private menuService: MenuService) { }
 }
