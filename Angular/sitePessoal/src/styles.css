@@ -24,3 +24,14 @@
 
     --color-black-1: #181818;   
 }
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer; 
+}
+
+a:hover {
+    color: var(--color-black-1); 
+    text-decoration: underline; 
+}
