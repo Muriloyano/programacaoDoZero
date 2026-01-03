@@ -33,5 +33,4 @@ a {
 
 a:hover {
     color: var(--color-black-1); 
-    text-decoration: underline; 
 }

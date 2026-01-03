@@ -1,0 +1,65 @@
+/* box banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--color-blue-2) 15%, var(--color-blue-3) 100%);
+    color: white;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.banner .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 5px;
+}
+
+.banner .box .paragrafo {
+    margin: 15px 0;
+    font-size: var(--font-size-5);
+    font-weight: 400;
+    color: #fff;
+}
+
+.banner .box .title1 {
+    font-size: var(--font-size-2);
+}
+
+.banner .box .title2 {
+    font-size: var(--font-size-1);
+    display: block;
+    max-width: 450px;
+}
+
+.banner .box .button {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.banner .box .button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-width: 170px;
+    border-radius: 35px;
+    margin: 0 5px 15px;
+    font-size: var(--font-size-4);
+    background: var(--color-blue-1);
+    color: #fff;
+    text-wrap: nowrap;
+}
+
+.banner .box .button a:hover {
+    background: var(--color-blue-2);
+
+}
+
+.banner .box .button a i {
+    margin-right: 7px;
+}
