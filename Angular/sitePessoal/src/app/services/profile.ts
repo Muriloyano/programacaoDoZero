@@ -14,7 +14,7 @@ export class ProfileService {
       email: 'muril0yano150107@gmail.com',
       name: 'Murilo Yano',
       whatsAppUrl: 'https://wa.link/92fzw5',
-      linkedIn: 'www.linkedin.com/in/murilo-yano-119088360',
+      linkedIn: 'https://www.linkedin.com/in/murilo-yano-119088360/',
     }
 
     return profile;

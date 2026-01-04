@@ -1,0 +1,10 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.footer .box p {
+        font-size: var(--font-size-5);
+        color: rgb(201, 201, 201);
+    }

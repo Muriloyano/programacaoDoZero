@@ -235,6 +235,59 @@
     font-size: 10px;
 }
 
+/* box contact */
+.contact {
+    background: var(--color-black-1);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contact .box {
+    max-width: 880px;
+    margin: 0 auto;
+}
+.contact .box h2,
+.contact .box h3 {
+    color: #fff;
+}
+
+.contact .box .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.contact .box .contacts a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: var(--color-blue-2);
+    height: 50px;
+    color: #fff;
+    border-radius: 35px;
+    min-width: 200px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.contact .box .contacts a:hover {
+    background: var(--color-blue-1);
+}
+
+.contact .box .contacts a span {
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.contact .box .contacts a svg {
+    width: 35px;
+    margin-right: 5px;
+}
+
 @media (min-width: 768px) {
     .about .box {
         flex-direction: row;
@@ -257,6 +310,11 @@
     .projetos .box .projeto,
     .projetos .box .projeto.reverse {
         flex-direction: row;
+    }
+
+    .contact .box .contacts {
+        flex-direction: row;
+        align-items: center;
     }
 }
 
