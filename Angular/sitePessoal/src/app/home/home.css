@@ -63,3 +63,124 @@
 .banner .box .button a i {
     margin-right: 7px;
 }
+
+/* box about */
+.about {
+    padding: 60px 5%; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.about .box {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.about .img {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;    
+    flex: 1; 
+}
+
+.about .img i {
+    line-height: 1; 
+    color: #000;   
+}
+
+.about .text {
+    flex: 2; 
+}
+
+.about .text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about .text h3 {
+    color: var(--color-blue-2); 
+    margin-bottom: 20px;
+}
+
+.about .text p {
+    margin-bottom: 15px;
+    text-align: justify; 
+    line-height: 1.6;    
+}
+
+.about .text a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color-pink-1);
+    font-weight: bold;
+    text-decoration: none;
+}
+/* box skills */
+.skills {
+    background: var(--color-black-1);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.skills .box h2,
+.skills .box h3,
+.skills .box h4{
+    color: #fff;
+}
+
+.skills .box h3{
+    margin: 5px 0 20px;
+    font-size: var(--font-size-4);
+}
+
+.skills .box .itens {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.skills .box .itens .skill {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skills .box .itens .skill:hover {
+    background: #ffffff1f;
+}
+
+.skills .box .itens .skill img,
+.skills .box .itens .skill svg {
+    width: 90px;
+}
+
+.skills .box .itens .skill h4 {
+    margin-top: 15px;
+}
+
+
+@media (min-width: 768px) {
+    .about .box {
+        flex-direction: row;
+        align-items: center; 
+    }
+
+    .about .text {
+        padding-left: 50px; 
+    }
+
+    .skills .box .itens .skill {
+        width: 25%;
+    }
+    
+    .skills .box .itens .skill img,
+    .skills .box .itens .skill svg {
+        width: 90px;
+    }
+}
