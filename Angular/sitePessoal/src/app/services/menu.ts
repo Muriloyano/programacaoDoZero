@@ -24,7 +24,7 @@ export class MenuService {
       },
       {
         name: 'Projetos',
-        url: '#projecs',
+        url: '#projetos',
       },
       {
         name: 'Contato',
